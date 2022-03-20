@@ -1,0 +1,29 @@
+#N canvas 46 452 868 323 12;
+#X obj 23 223 soundfiler;
+#X obj 20 11 array define \$2;
+#X text 136 11 \$1=>hithat.wav \; \$2=>s1;
+#X obj 23 92 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 23 115 symbol \$1;
+#X symbolatom 23 139 10 0 0 0 - - -;
+#X obj 23 162 pack s s;
+#X obj 23 38 loadbang;
+#X obj 23 62 t b b;
+#X symbolatom 102 139 10 0 0 0 - - -;
+#X obj 102 96 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 102 116 symbol \$2;
+#X text 1 243 resize: resize the table size to the size of the sample
+;
+#X msg 23 187 read -resize ./samples/\$1 \$2, f 29;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 13 0;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X connect 8 1 10 0;
+#X connect 9 0 6 1;
+#X connect 10 0 11 0;
+#X connect 11 0 9 0;
+#X connect 13 0 0 0;

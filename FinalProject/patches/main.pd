@@ -1,0 +1,12 @@
+#N canvas 754 410 225 161 12;
+#X obj 13 19 note 1;
+#X obj 13 42 note 2;
+#X obj 13 65 note 3;
+#X obj 13 89 note 4;
+#X obj 13 112 note 5;
+#X obj 95 69 s ON;
+#X obj 95 15 r Pdstart;
+#X obj 95 45 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
